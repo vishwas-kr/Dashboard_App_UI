@@ -6,6 +6,7 @@ class PlaningGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return GridView.builder(
         itemCount: planing.length,
         physics: const NeverScrollableScrollPhysics(),
@@ -21,7 +22,7 @@ class PlaningGrid extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(12),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -37,22 +38,29 @@ class PlaningGrid extends StatelessWidget {
                       )
                     ],
                   ),
+                  const SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         planing[index].heading,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        maxLines: 1,
+                        style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.width * 0.035,
+                            fontWeight: FontWeight.bold,
+                            overflow: TextOverflow.ellipsis),
                       ),
                       Text(
                         planing[index].subHeading,
-                        style: const TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                        ),
                       )
                     ],
                   ),
+                  const Spacer(),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
