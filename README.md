@@ -12,3 +12,6 @@ Dashboard App UI build using Flutter. Made with GridView, Drawer, List, Bar Char
 <img src="images/ss/1.png" width="250"> <img src="images/ss/2.png" width="250"> <img src="images/ss/3.png" width="250"> 
 <img src="images/ss/4.png" width="250"> <img src="images/ss/5.png" width="250">
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Dev-Adnani/MetRoom-Flutter/main/assets/logo/logo.png" />
+</p>
